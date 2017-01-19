@@ -1,0 +1,15 @@
+var obj = document.getElementsByClassName("infinite-list-viewport")[0].getElementsByClassName("infinite-list-item infinite-list-item-transition");
+
+console.log("Group Name : " + document.getElementsByClassName("input-wrapper locked")[0].getElementsByTagName("div")[1].innerHTML);
+
+console.log("Number of participants : " + obj.length);
+var mywindow = window.open('file:///D:/ad.txt', 'Print  Report', 'height=400,width=600');
+
+mywindow.document.write(" " + document.getElementsByClassName("input-wrapper locked")[0].getElementsByTagName("div")[1].innerHTML);
+	mywindow.document.write('<br/>');
+	
+for(var i=0;i<obj.length;i++)
+{
+	mywindow.document.write(obj[i].getElementsByTagName("span")[0].title);
+	mywindow.document.write('<br/>');
+}
